@@ -23,9 +23,15 @@ Content-Type: application/json
 
 _**Body:**_
 - _players_ `Player[]` danh sách người chơi trên bàn., theo thứ tự của vòng chơi ví dụ trên bàn còn 4 người chơi A, B, C, D, đang lượt chơi của C và tiếp theo sẽ là D, A, B theo thứ tự. thì mảng này sẽ sắp xếp theo thứ tự [A, B, C, D], hoặc [B, C, D, A] hoặc [C, D, A, B], ..etc. miễn sao là theo thứ tự của vòng là được.
-- _previous_player_id_ `string` id của người chơi trước liền kề người chơi hiện tại (không tính người pass) của round hiện tại, nếu lượt hiện tại là là lượt đầu của ván hoặc round hiện tại thì đặt thành chuỗi rỗng. (ví dụ A đánh 2 bích, B pass, đến lượt C thì previous player id = A).
+- _previous_player_id_ `string` id của người chơi trước liền kề người chơi hiện tại (**không tính người pass**) của round hiện tại, 
+  + **Nếu lượt hiện tại là là lượt đầu của ván hoặc round hiện tại thì đặt thành chuỗi rỗng.** 
+  + A đánh, B đánh đến C thì previous player id = B
+  + A đánh, B pass, đến lượt C thì previous player id = A.
 - _current_player_id_ `string` id của người chơi hiện tại, không được rỗng hoặc null.
-- _combination_ `Combination` bộ bài trên bàn, ví dụ A đánh đôi 2 rồi đến lượt B thì combination là đôi 2, còn nếu là lượt đầu của round mới hoặc game mới thì để là null.
+- _combination_ `Combination` bộ bài **gần nhất** được đánh trên bàn (**không thể là Pass**), ví dụ:
+  + Nếu A đánh đôi 2 rồi đến lượt B thì combination là đôi 2
+  + Nếu B Pass rồi đến C thì combination **vẫn là đôi 2**
+  + **Còn nếu là lượt đầu của round mới hoặc game mới thì để là null**.
 - _is_first_play_ `bool` true nếu lượt này bắt buộc phải đánh 3 bích (tuỳ vào luật, thường là lượt chơi đầu của game đầu trong bàn).
 - _config_ `Config` config chi tiết cho thuật toán.
 
