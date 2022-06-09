@@ -33,6 +33,7 @@ _**Body:**_
   + Nếu B Pass rồi đến C thì combination **vẫn là đôi 2**
   + **Còn nếu là lượt đầu của round mới hoặc game mới thì để là null**.
 - _is_first_play_ `bool` true nếu lượt này bắt buộc phải đánh 3 bích (tuỳ vào luật, thường là lượt chơi đầu của game đầu trong bàn).
+- _allow_first_play_cards_ `int[]` danh sách các lá bài bắt buộc phải đánh (hoặc các bộ chứa 1 trong các lá đò) nếu `is_first_play = true`, nếu người chơi không có lá nào trong các lá này thì sẽ được đánh thoải mái không bắt buộc gì, Còn trong trường hợp không gửi lên hoặc rỗng thì mặc định sẽ bắt buộc phải đánh lá nhỏ nhất trong bộ, hoặc 1 bộ có chứa lá đó. (ví dụ [3♠] thì tức là bắt buộc phải đánh là 3♠ hoặc bộ chứa 3♠ trước, nếu không có 3♠ thì có thể đánh bình thường)
 - _config_ `Config` config chi tiết cho thuật toán.
 
 _**Response:**_
