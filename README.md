@@ -1,3 +1,21 @@
+**Contact Me:** https://t.me/DontBeSad_Cuz_MinhFatIsHere
+
+**Email:** dangnguyendota@gmail.com
+
+Document cho API Tiến lên Bot Service.
+
+Cấu trúc Bot:
+
+| Cấu trúc hệ thống                                                                                                                                                                                                                                                                | 
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **API Service:** Server nhận request từ bên ngoài                                                                                                                                                                                                                                |
+| **Input Parser:** thực hiện chuyển yêu cầu từ bên ngoài thành input cho bot.                                                                                                                                                                                                     |
+| **Optimizer:** từ những quyết định có thể của bot, tối ưu hóa lược bớt các quyết định không giống người hoặc gây mất lợi thế                                                                                                                                                     |
+| **Bot Algorithm:** thuật toán nhận đầu vào từ Optimizer và thực hiện tính toán để đưa ra quyết định tốt nhất trong những quyết định đó                                                                                                                                           |
+| **Output Parser:** chuyển output của bot thành output mà người call API mong muốn.                                                                                                                                                                                               |
+| Service được deploy bằng **docker** giúp tối ưu hóa thời gian triển khai hệ thống, hệ thống ghi log chi tiết từng request theo ngày. Service chạy ổn định và tự động khởi động lại nếu gặp lỗi, chịu tải số lượng lớn hàng trăm nghìn bot một lúc cho một máy chủ cấu hình thấp. |
+
+
 _BaseURL_: http://localhost:9701
 
 ## API Ping
