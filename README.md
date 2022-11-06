@@ -1,7 +1,5 @@
 **Contact Me:** https://t.me/DontBeSad_Cuz_MinhFatIsHere
 
-**Email:** dangnguyendota@gmail.com
-
 Document cho API Tiến lên Bot Service.
 
 
